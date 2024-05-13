@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="User_authentication")
+@Table(name="user_authentication")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,4 +19,11 @@ public class User {
     private String password;
     private String email;
 
+
+    public String getUsername() {
+        return username;
+    }
+    public String getPassword(){
+        return password;
+    }
 }
